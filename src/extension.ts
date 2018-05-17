@@ -4,7 +4,7 @@
  * ------------------------------------------------------------------------------------------ */
 'use strict';
 
-import { spawn, execFile }  from 'child_process';
+import { spawn }  from 'child_process';
 import { commands, window, workspace, ExtensionContext } from 'vscode';
 import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient';
 
@@ -32,9 +32,9 @@ export async function activate(context: ExtensionContext) {
 			}
 		}
 	});
-	childProcess.on("error", err => {
+	childProcess.on("error", () => {
 		const selected = window.showErrorMessage("Error spawning fortls: This can occur if you do not have the fortran-language-server installed or if it is not in your path.", 'Open settings');
-		selected.then( (result) => 
+		selected.then( () => 
 			commands.executeCommand('workbench.action.openGlobalSettings')
 		)
 	});

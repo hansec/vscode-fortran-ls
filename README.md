@@ -5,7 +5,9 @@
 
 FORTRAN IntelliSense support for VSCODE, powered by the [FORTRAN Language Server](https://github.com/hansec/fortran-language-server).
 
-![Screen shot of FORTRAN IntelliSense](https://raw.githubusercontent.com/hansec/fortran-ls/master/images/screenshot.png)
+![Autocomplete in FORTRAN IntelliSense](https://raw.githubusercontent.com/hansec/vscode-fortran-ls/master/images/autocomplete.png)
+
+![Hover definition in FORTRAN IntelliSense](https://raw.githubusercontent.com/hansec/vscode-fortran-ls/master/images/hover_def.png)
 
 ## Beta release
 
@@ -15,7 +17,7 @@ new features and fixes.
 
 ## Requirements
 This package requires the following packages to be installed:
- * [fortran](https://atom.io/packages/language-fortran)
+ * [fortran](https://marketplace.visualstudio.com/items?itemName=Gimly81.fortran)
 
 Additionally, you must have [Python](https://www.python.org/) and the
 [FORTRAN Language Server](https://github.com/hansec/fortran-language-server) installed
@@ -31,9 +33,6 @@ This package has been tested and *should* work on :apple: macOS (OS X), :penguin
 * Diagnostics (fortls v0.3.0+)
 
 See [FORTRAN Language Server](https://github.com/hansec/fortran-language-server) for examples and more details.
-
-**Note:** If you are already using the [autocomplete-fortran](https://atom.io/packages/autocomplete-fortran) package
-disable it or you will see multiple copies of suggestions in auto completion.
 
 ## Configuration
 
