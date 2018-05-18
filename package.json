@@ -39,6 +39,24 @@
                     "type": "string",
                     "default": "fortls",
                     "description": "Path to fortran-language-server (fortls)."
+                },
+                "fortran-ls.includeSymbolMem": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Include type members in document outline (used for 'Go to Symbol in File')"
+                },
+                "fortran-ls.incrementalSync": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Use incremental synchronization for file changes."
+                },
+                "fortran-ls.displayVerWarning": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Provides notifications when the underlying ```fortran-language-server``` is out of date."
                 }
             }
         }

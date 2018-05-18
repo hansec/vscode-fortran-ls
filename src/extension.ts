@@ -15,23 +15,25 @@ export async function activate(context: ExtensionContext) {
 	const executablePath = conf.get<string>('executablePath') || 'fortls';
 	
 	// Check path (if fortls is available and version is ^0.3.6)
-	let args = ["--version"];
-    const childProcess = spawn(executablePath, args);
-    childProcess.stdout.on('data', (data) => {
-		// Check version
-    	let ver_str = data.toString().trim();
-    	let ver_split = ver_str.split(".");
-    	const rec_ver_str = "0.3.6";
-		let rec_ver = rec_ver_str.split(".");
-		for (var index = 0; index < rec_ver.length; ++index) {
-			if (parseInt(ver_split[index]) < parseInt(rec_ver[index])) {
-				window.showWarningMessage(`fortran-ls: Installed version (${ver_str}) of "fortls" is lower than the recommended version (${rec_ver_str}).`);
-				break
-			} else if (parseInt(ver_split[index]) > parseInt(rec_ver[index])) {
-				break
+	let args_check = ["--version"];
+	const childProcess = spawn(executablePath, args_check);
+	// Check version
+	if (conf.get<boolean>('displayVerWarning')) {
+		childProcess.stdout.on('data', (data) => {
+			let ver_str = data.toString().trim();
+			let ver_split = ver_str.split(".");
+			const rec_ver_str = "0.3.6";
+			let rec_ver = rec_ver_str.split(".");
+			for (var index = 0; index < rec_ver.length; ++index) {
+				if (parseInt(ver_split[index]) < parseInt(rec_ver[index])) {
+					window.showWarningMessage(`fortran-ls: Installed version (${ver_str}) of "fortls" is lower than the recommended version (${rec_ver_str}).`);
+					break
+				} else if (parseInt(ver_split[index]) > parseInt(rec_ver[index])) {
+					break
+				}
 			}
-		}
-	});
+		});
+	}
 	childProcess.on("error", () => {
 		const selected = window.showErrorMessage("Error spawning fortls: This can occur if you do not have the fortran-language-server installed or if it is not in your path.", 'Open settings');
 		selected.then( () => 
@@ -39,10 +41,16 @@ export async function activate(context: ExtensionContext) {
 		)
 	});
 
+	//
+	let args_server = [];
+    if (!conf.get<boolean>('includeSymbolMem')) { args_server.push("--symbol_skip_mem") }
+	if (conf.get<boolean>('incrementalSync')) { args_server.push("--incrmental_sync") }
+	
 	// If the extension is launched in debug mode then the debug server options are used
 	// Otherwise the run options are used
 	let serverOptions: ServerOptions = {
-		command: executablePath
+		command: executablePath,
+		args: args_server
 	}
 	
 	// Options to control the language client
