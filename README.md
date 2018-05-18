@@ -32,9 +32,11 @@ This package has been tested and *should* work on :apple: macOS (OS X), :penguin
 * Hover
 * Diagnostics (fortls v0.3.0+)
 
-See [FORTRAN Language Server](https://github.com/hansec/fortran-language-server) for examples and more details.
+See [FORTRAN Language Server](https://github.com/hansec/fortran-language-server) for examples and more details. There is also a [companion package](https://atom.io/packages/ide-fortran) for [the Atom text editor](https://atom.io/).
 
 ## Configuration
+
+**Note:** When setting an explicit language server executable path on Windows backslashes must be escaped (ex. `C:\\path\\to\\fortls.exe`).
 
 See the [fortran-language-server README](https://github.com/hansec/fortran-language-server/blob/master/README.rst) for
 information on project specific configuration settings.
