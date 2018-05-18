@@ -42,7 +42,7 @@ information on project specific configuration settings.
 ## Bug reports
 Note that most bugs observed with this package are actually related to the upstream
 [fortran-language-server](https://github.com/hansec/fortran-language-server). Unless you believe the error
-you observe is directly related to Atom please submit issues to the
+you observe is directly related to Visual Studio Code please submit issues to the
 [upstream repo](https://github.com/hansec/fortran-language-server/issues/new). When filing bugs please
 provide example code to reproduce the observed issue if possible.
 
@@ -51,4 +51,4 @@ MIT License. See [the license](LICENSE.md) for more details.
 
 ## Support
 
-If you *really* like [ide-fortran](https://atom.io/packages/ide-fortran) or the underlying [language server](https://github.com/hansec/fortran-language-server) you can <a href='https://paypal.me/hansec' target="_blank">buy me a :coffee: or a :beer:</a> to say thanks.
+If you *really* like [FORTRAN IntelliSense](https://marketplace.visualstudio.com/items?itemName=hansec.fortran-ls) or the underlying [language server](https://github.com/hansec/fortran-language-server) you can <a href='https://paypal.me/hansec' target="_blank">buy me a :coffee: or a :beer:</a> to say thanks.
