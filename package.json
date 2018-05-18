@@ -37,7 +37,7 @@
 				"fortran-ls.executablePath": {
 					"scope": "resource",
 					"type": "string",
-					"default": "fortlss",
+					"default": "fortls",
 					"description": "Path to fortran-language-server (fortls)."
 				}
 			}
