@@ -9,6 +9,8 @@ FORTRAN IntelliSense support for VSCODE, powered by the [FORTRAN Language Server
 
 ![Hover definition in FORTRAN IntelliSense](https://raw.githubusercontent.com/hansec/vscode-fortran-ls/master/images/hover_def.png)
 
+![Peek definition in FORTRAN IntelliSense](https://raw.githubusercontent.com/hansec/vscode-fortran-ls/master/images/peek_def.png)
+
 ## Beta release
 
 This package and its [language server](https://github.com/hansec/fortran-language-server) are in early
@@ -30,7 +32,7 @@ This package has been tested and *should* work on :apple: macOS (OS X), :penguin
 * Auto completion
 * Go to definition
 * Hover
-* Diagnostics (fortls v0.3.0+)
+* Diagnostics
 
 See [FORTRAN Language Server](https://github.com/hansec/fortran-language-server) for examples and more details. There is also a [companion package](https://atom.io/packages/ide-fortran) for [the Atom text editor](https://atom.io/).
 
