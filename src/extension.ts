@@ -22,7 +22,7 @@ export async function activate(context: ExtensionContext) {
 		childProcess.stdout.on('data', (data) => {
 			let ver_str = data.toString().trim();
 			let ver_split = ver_str.split(".");
-			const rec_ver_str = "0.3.6";
+			const rec_ver_str = "0.3.7";
 			let rec_ver = rec_ver_str.split(".");
 			for (var index = 0; index < rec_ver.length; ++index) {
 				if (parseInt(ver_split[index]) < parseInt(rec_ver[index])) {
@@ -45,6 +45,7 @@ export async function activate(context: ExtensionContext) {
 	let args_server = [];
     if (!conf.get<boolean>('includeSymbolMem')) { args_server.push("--symbol_skip_mem") }
 	if (conf.get<boolean>('incrementalSync')) { args_server.push("--incrmental_sync") }
+	if (!conf.get<boolean>('autocompletePrefix')) { args_server.push("--autocomplete_no_prefix") }
 	
 	// If the extension is launched in debug mode then the debug server options are used
 	// Otherwise the run options are used

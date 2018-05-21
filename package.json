@@ -46,6 +46,12 @@
                     "default": true,
                     "description": "Include type members in document outline (used for 'Go to Symbol in File')"
                 },
+                "fortran-ls.autocompletePrefix": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Filter autocomplete suggestions with variable prefix (disabling requires fortls v0.3.7+)"
+                },
                 "fortran-ls.incrementalSync": {
                     "scope": "resource",
                     "type": "boolean",
