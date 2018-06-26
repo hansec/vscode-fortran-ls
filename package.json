@@ -49,19 +49,19 @@
                 "fortran-ls.autocompletePrefix": {
                     "scope": "resource",
                     "type": "boolean",
-                    "default": true,
+                    "default": false,
                     "description": "Filter autocomplete suggestions with variable prefix (disabling requires fortls v0.3.7+)"
                 },
                 "fortran-ls.lowercaseIntrinsics": {
                     "scope": "resource",
                     "type": "boolean",
                     "default": false,
-                    "description": "Use lowercase for intrinsics and keywords in autocomplete requests (requires fortls v0.5.0+)"
+                    "description": "Use lowercase for intrinsics and keywords in autocomplete requests (requires fortls v0.6.0+)"
                 },
                 "fortran-ls.incrementalSync": {
                     "scope": "resource",
                     "type": "boolean",
-                    "default": false,
+                    "default": true,
                     "description": "Use incremental synchronization for file changes."
                 },
                 "fortran-ls.displayVerWarning": {

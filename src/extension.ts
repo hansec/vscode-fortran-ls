@@ -22,7 +22,7 @@ export async function activate(context: ExtensionContext) {
 		childProcess.stdout.on('data', (data) => {
 			let ver_str = data.toString().trim();
 			let ver_split = ver_str.split(".");
-			const rec_ver_str = "0.5.0";
+			const rec_ver_str = "0.6.0";
 			let rec_ver = rec_ver_str.split(".");
 			for (var index = 0; index < rec_ver.length; ++index) {
 				if (parseInt(ver_split[index]) < parseInt(rec_ver[index])) {
