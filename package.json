@@ -64,6 +64,12 @@
                     "default": true,
                     "description": "Use incremental synchronization for file changes."
                 },
+                "fortran-ls.useSignatureHelp": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Use signature help instead of snippets when available (requires fortls v0.7.0+)."
+                },
                 "fortran-ls.displayVerWarning": {
                     "scope": "resource",
                     "type": "boolean",

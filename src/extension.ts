@@ -66,6 +66,7 @@ export async function activate(context: ExtensionContext) {
 	if (conf.get<boolean>('incrementalSync')) { args_server.push("--incrmental_sync") }
 	if (!conf.get<boolean>('autocompletePrefix')) { args_server.push("--autocomplete_no_prefix") }
 	if (conf.get<boolean>('lowercaseIntrinsics')) { args_server.push("--lowercase_intrinsics") }
+	if (conf.get<boolean>("useSignatureHelp")) { args_server.push("--use_signature_help") }
 
 	// If the extension is launched in debug mode then the debug server options are used
 	// Otherwise the run options are used
