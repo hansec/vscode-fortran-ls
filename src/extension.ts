@@ -20,7 +20,7 @@ async function checkVersion(executablePath: string) {
 		}
 		return false;
 	}
-	async function checkVersionLocal(executablePath: string, rec_ver_str: string = "0.6.1") {
+	async function checkVersionLocal(executablePath: string, rec_ver_str: string = "0.7.0") {
 		const childProcess = spawn(executablePath, ["--version"]);
 		// Check version
 		childProcess.stdout.on('data', (data) => {

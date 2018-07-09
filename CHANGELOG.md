@@ -1,3 +1,7 @@
+## 0.1.2
+* Add support for signatureHelp requests
+* Bump recommended minimum language server version to 0.7.0
+
 ## 0.1.1
 * Add automatic language server version check when package loads
 
