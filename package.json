@@ -44,13 +44,13 @@
                     "scope": "resource",
                     "type": "boolean",
                     "default": true,
-                    "description": "Include type members in document outline (used for 'Go to Symbol in File')"
+                    "description": "Include type members in document outline (also used for 'Go to Symbol in File')"
                 },
                 "fortran-ls.autocompletePrefix": {
                     "scope": "resource",
                     "type": "boolean",
                     "default": false,
-                    "description": "Filter autocomplete suggestions with variable prefix (disabling requires fortls v0.3.7+)"
+                    "description": "Filter autocomplete suggestions with variable prefix"
                 },
                 "fortran-ls.lowercaseIntrinsics": {
                     "scope": "resource",
@@ -63,6 +63,12 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Use incremental synchronization for file changes."
+                },
+                "fortran-ls.variableHover": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Show hover information for variables (requires fortls v0.7.1+)."
                 },
                 "fortran-ls.useSignatureHelp": {
                     "scope": "resource",
