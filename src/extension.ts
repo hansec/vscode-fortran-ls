@@ -20,7 +20,7 @@ async function checkVersion(executablePath: string) {
 		}
 		return false;
 	}
-	async function checkVersionLocal(executablePath: string, rec_ver_str: string = "0.7.1") {
+	async function checkVersionLocal(executablePath: string, rec_ver_str: string = "0.8.1") {
 		const childProcess = spawn(executablePath, ["--version"]);
 		// Check version
 		childProcess.stdout.on('data', (data) => {
@@ -66,8 +66,8 @@ export async function activate(context: ExtensionContext) {
 	if (conf.get<boolean>('incrementalSync')) { args_server.push("--incrmental_sync") }
 	if (!conf.get<boolean>('autocompletePrefix')) { args_server.push("--autocomplete_no_prefix") }
 	if (conf.get<boolean>('lowercaseIntrinsics')) { args_server.push("--lowercase_intrinsics") }
-	if (conf.get<boolean>("useSignatureHelp")) { args_server.push("--use_signature_help") }
-	if (conf.get<boolean>("variableHover")) { args_server.push("--variable_hover") }
+	if (conf.get<boolean>('useSignatureHelp')) { args_server.push("--use_signature_help") }
+	if (conf.get<boolean>('variableHover')) { args_server.push("--variable_hover") }
 
 	// If the extension is launched in debug mode then the debug server options are used
 	// Otherwise the run options are used

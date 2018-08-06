@@ -73,7 +73,7 @@
                 "fortran-ls.useSignatureHelp": {
                     "scope": "resource",
                     "type": "boolean",
-                    "default": false,
+                    "default": true,
                     "description": "Use signature help instead of snippets when available (requires fortls v0.7.0+)."
                 },
                 "fortran-ls.displayVerWarning": {
