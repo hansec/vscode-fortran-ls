@@ -29,11 +29,16 @@ This package has been tested and *should* work on :apple: macOS (OS X), :penguin
 
 ## Features
 
-* Auto completion
-* Go to definition
-* Hover
-* Find references (fortls v0.4.0+)
+* [Completion](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_autocomplete.gif)
+* [Signature help (fortls v0.7.0+)](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_sigHelp.gif)
+* Document outline
+* [Go to definition](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_gotodef.gif)
+* [Hover](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_hover.gif)
+* [Find references](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_refs.png)
 * Diagnostics
+  - Multiple use of the same variable name
+  - Unknown module in USE statement
+  - Variable masking definition from parent scope
 
 See [Fortran Language Server](https://github.com/hansec/fortran-language-server) for examples and more details. There is also a [companion package](https://atom.io/packages/ide-fortran) for [the Atom text editor](https://atom.io/).
 
