@@ -26,6 +26,7 @@
     },
     "activationEvents": [
         "onLanguage:fortran",
+        "onLanguage:fortran_fixed-form",
         "onLanguage:fortran-modern"
     ],
     "main": "./out/src/extension",

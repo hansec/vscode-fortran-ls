@@ -81,6 +81,7 @@ export async function activate(context: ExtensionContext) {
 		// Register the server for plain text documents
 		documentSelector: [
 			{scheme: 'file', language: 'fortran'},
+			{scheme: 'file', language: 'fortran_fixed-form'},
 			{scheme: 'file', language: 'fortran-modern'}
 		],
 		synchronize: {
