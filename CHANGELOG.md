@@ -1,3 +1,7 @@
+## 0.2.1
+* Add support for additional language scopes, fixes [#3](https://github.com/hansec/vscode-fortran-ls/issues/3)
+* Bump recommended minimum language server version to 0.9.2
+
 ## 0.2.0
 * Use signatureHelp by default
 * Bump recommended minimum language server version to 0.8.1
