@@ -1,3 +1,6 @@
+## 0.2.3
+* Fix package publishing errors
+
 ## 0.2.1
 * Add support for additional language scopes, fixes [#3](https://github.com/hansec/vscode-fortran-ls/issues/3)
 * Bump recommended minimum language server version to 0.9.2
