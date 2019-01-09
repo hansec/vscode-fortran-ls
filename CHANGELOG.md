@@ -1,3 +1,6 @@
+## 0.2.4
+* Fix support for free form files with Modern Fortran extension
+
 ## 0.2.3
 * Fix package publishing errors
 
