@@ -82,7 +82,7 @@ export async function activate(context: ExtensionContext) {
 		documentSelector: [
 			{scheme: 'file', language: 'fortran'},
 			{scheme: 'file', language: 'fortran_fixed-form'},
-			{scheme: 'file', language: 'fortran-modern'}
+			{scheme: 'file', language: 'FortranFreeForm'}
 		],
 		synchronize: {
 			// Notify the server about file changes to fortran files contain in the workspace

@@ -27,7 +27,7 @@
     "activationEvents": [
         "onLanguage:fortran",
         "onLanguage:fortran_fixed-form",
-        "onLanguage:fortran-modern"
+        "onLanguage:FortranFreeForm"
     ],
     "main": "./out/src/extension",
     "contributes": {
