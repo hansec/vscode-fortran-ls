@@ -18,8 +18,8 @@ release states. Be sure to periodically update the underlying language server to
 new features and fixes.
 
 ## Requirements
-This package requires the following packages to be installed:
- * [fortran](https://marketplace.visualstudio.com/items?itemName=Gimly81.fortran)
+This package requires the following extensions to be installed:
+ * [Modern Fortran](https://marketplace.visualstudio.com/items?itemName=krvajalm.linter-gfortran) or [fortran](https://marketplace.visualstudio.com/items?itemName=Gimly81.fortran)
 
 Additionally, you must have [Python](https://www.python.org/) and the
 [Fortran Language Server](https://github.com/hansec/fortran-language-server) installed
