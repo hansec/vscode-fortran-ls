@@ -1,3 +1,6 @@
+## 0.2.5
+* Update README to reflect Modern Fortran extension support
+
 ## 0.2.4
 * Fix support for free form files with Modern Fortran extension
 
