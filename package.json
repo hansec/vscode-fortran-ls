@@ -16,7 +16,8 @@
     "keywords": [
         "fortran",
         "intellisense",
-        "autocompletion"
+        "autocompletion",
+        "ide"
     ],
     "categories": [
         "Programming Languages"
@@ -57,7 +58,7 @@
                     "scope": "resource",
                     "type": "boolean",
                     "default": false,
-                    "description": "Use lowercase for intrinsics and keywords in autocomplete requests (requires fortls v0.6.0+)"
+                    "description": "Use lowercase for intrinsics and keywords in autocomplete requests."
                 },
                 "fortran-ls.incrementalSync": {
                     "scope": "resource",
@@ -69,13 +70,13 @@
                     "scope": "resource",
                     "type": "boolean",
                     "default": false,
-                    "description": "Show hover information for variables (requires fortls v0.7.1+)."
+                    "description": "Show hover information for variables."
                 },
                 "fortran-ls.useSignatureHelp": {
                     "scope": "resource",
                     "type": "boolean",
                     "default": true,
-                    "description": "Use signature help instead of snippets when available (requires fortls v0.7.0+)."
+                    "description": "Use signature help instead of snippets when available."
                 },
                 "fortran-ls.displayVerWarning": {
                     "scope": "resource",

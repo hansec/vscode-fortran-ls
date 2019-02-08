@@ -3,7 +3,7 @@
 [![downloads](https://img.shields.io/vscode-marketplace/d/hansec.fortran-ls.svg)](https://marketplace.visualstudio.com/items?itemName=hansec.fortran-ls)
 [![rating](https://img.shields.io/vscode-marketplace/r/hansec.fortran-ls.svg)](https://marketplace.visualstudio.com/items?itemName=hansec.fortran-ls)
 
-Fortran IntelliSense support for VSCODE, powered by the [Fortran Language Server](https://github.com/hansec/fortran-language-server).
+Fortran IntelliSense (IDE functionality) support for VSCode, powered by the [Fortran Language Server](https://github.com/hansec/fortran-language-server).
 
 ![Autocomplete in Fortran IntelliSense](https://raw.githubusercontent.com/hansec/vscode-fortran-ls/master/images/autocomplete.png)
 
@@ -11,26 +11,21 @@ Fortran IntelliSense support for VSCODE, powered by the [Fortran Language Server
 
 ![Peek definition in Fortran IntelliSense](https://raw.githubusercontent.com/hansec/vscode-fortran-ls/master/images/peek_def.png)
 
-## Beta release
-
-This package and its [language server](https://github.com/hansec/fortran-language-server) are in early
-release states. Be sure to periodically update the underlying language server to stay up to date with
-new features and fixes.
-
 ## Requirements
 This package requires the following extensions to be installed:
  * [Modern Fortran](https://marketplace.visualstudio.com/items?itemName=krvajalm.linter-gfortran) or [fortran](https://marketplace.visualstudio.com/items?itemName=Gimly81.fortran)
 
 Additionally, you must have [Python](https://www.python.org/) and the
 [Fortran Language Server](https://github.com/hansec/fortran-language-server) installed
-on your system.
+on your system. Be sure to periodically update the underlying language server to stay up to date with
+new features and fixes.
 
 This package has been tested and *should* work on :apple: macOS (OS X), :penguin: Linux and Windows.
 
 ## Features
 
 * [Completion](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_autocomplete.gif)
-* [Signature help (fortls v0.7.0+)](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_sigHelp.gif)
+* [Signature help](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_sigHelp.gif)
 * Document outline
 * [Go to definition](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_gotodef.gif)
 * [Hover](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_hover.gif)
