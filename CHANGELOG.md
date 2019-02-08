@@ -1,3 +1,6 @@
+## 0.3.0
+* Update package to reflect full release of language server
+
 ## 0.2.5
 * Update README to reflect Modern Fortran extension support
 
