@@ -5,6 +5,36 @@
 
 Fortran IntelliSense (IDE functionality) support for VSCode, powered by the [Fortran Language Server](https://github.com/hansec/fortran-language-server).
 
+## Features
+
+* Document outline
+* [Completion](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_autocomplete.gif)
+* [Signature help](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_sigHelp.gif)
+* [GoTo/Peek definition](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_gotodef.gif)
+* GoTo implementation
+* [Hover](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_hover.gif)
+* [Find/Peek references](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_refs.png)
+* Project-wide symbol search
+* Symbol renaming
+* Documentation parsing ([Doxygen](http://www.doxygen.org/) and [FORD](https://github.com/Fortran-FOSS-Programmers/ford) styles)
+* Diagnostics
+  - Multiple definitions with the same variable name
+  - Variable definition masks definition from parent scope
+  - Missing subroutine/function arguments
+  - Unknown user-defined type used in "TYPE"/"CLASS" definition (only if visible in project)
+  - Unclosed blocks/scopes
+  - Invalid scope nesting
+  - Unknown modules in "USE" statement
+  - Unimplemented deferred type-bound procedures
+  - Use of unimported variables/objects in interface blocks
+  - Statement placement errors ("CONTAINS", "IMPLICIT", "IMPORT")
+* Code actions [Experimental, must be enabled in settings]
+  - Generate type-bound procedures and implementation templates for deferred procedures
+
+See [Fortran Language Server](https://github.com/hansec/fortran-language-server) for examples and more details. There is also a [companion package](https://atom.io/packages/ide-fortran) for [the Atom text editor](https://atom.io/).
+
+**Examples:**
+
 ![Autocomplete in Fortran IntelliSense](https://raw.githubusercontent.com/hansec/vscode-fortran-ls/master/images/autocomplete.png)
 
 ![Hover definition in Fortran IntelliSense](https://raw.githubusercontent.com/hansec/vscode-fortran-ls/master/images/hover_def.png)
@@ -22,24 +52,23 @@ new features and fixes.
 
 This package has been tested and *should* work on :apple: macOS (OS X), :penguin: Linux and Windows.
 
-## Features
-
-* [Completion](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_autocomplete.gif)
-* [Signature help](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_sigHelp.gif)
-* Document outline
-* [Go to definition](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_gotodef.gif)
-* [Hover](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_hover.gif)
-* [Find references](https://raw.githubusercontent.com/hansec/fortran-language-server/master/images/fortls_refs.png)
-* Diagnostics
-  - Multiple use of the same variable name
-  - Unknown module in USE statement
-  - Variable masking definition from parent scope
-
-See [Fortran Language Server](https://github.com/hansec/fortran-language-server) for examples and more details. There is also a [companion package](https://atom.io/packages/ide-fortran) for [the Atom text editor](https://atom.io/).
-
 ## Configuration
 
 **Note:** When setting an explicit language server executable path on Windows backslashes must be escaped (ex. `C:\\path\\to\\fortls.exe`).
+
+Due to Fortran's syntax it is recommended that you disable the `Enter` key for suggestion confirmation.
+This can be done selectively in fortran files by adding the snippet below to your
+[settings.json file](https://code.visualstudio.com/docs/getstarted/settings).
+
+    "[fortran]": {
+        "editor.acceptSuggestionOnEnter": "off"
+    },
+    "[fortran_fixed-form]": {
+        "editor.acceptSuggestionOnEnter": "off"
+    },
+    "[FortranFreeForm]": {
+        "editor.acceptSuggestionOnEnter": "off"
+    }
 
 See the [fortran-language-server README](https://github.com/hansec/fortran-language-server/blob/master/README.rst) for
 information on project specific configuration settings.

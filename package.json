@@ -34,7 +34,7 @@
     "contributes": {
         "configuration": {
             "type": "object",
-            "title": "FORTRAN IntelliSense",
+            "title": "Fortran IntelliSense",
             "properties": {
                 "fortran-ls.executablePath": {
                     "scope": "resource",
@@ -77,6 +77,18 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Use signature help instead of snippets when available."
+                },
+                "fortran-ls.notifyInit": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Notify when workspace initialization is complete (requires v1.7.0+)."
+                },
+                "fortran-ls.enableCodeActions": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable experimental code actions (requires v1.7.0+)."
                 },
                 "fortran-ls.displayVerWarning": {
                     "scope": "resource",
