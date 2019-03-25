@@ -1,3 +1,7 @@
+## 0.4.0
+* Add support for language server v1.7 features
+* Verify language server launch arguments before constructing server interface
+
 ## 0.3.0
 * Update package to reflect full release of language server
 
