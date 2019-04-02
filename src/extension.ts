@@ -120,6 +120,8 @@ export async function activate() {
 		// Get path for the language server
 		const conf = workspace.getConfiguration('fortran-ls', null);
 		const executablePath = conf.get<string>('executablePath') || 'fortls';
+		const maxLineLength = conf.get<number>('maxLineLength') || -1;
+		const maxCommentLineLength = conf.get<number>('maxCommentLineLength') || -1;
 
 		// Setup server arguments
 		let args_server = [];
@@ -131,6 +133,8 @@ export async function activate() {
 		if (conf.get<boolean>('variableHover')) { args_server.push("--variable_hover") }
 		if (conf.get<boolean>('notifyInit')) { args_server.push("--notify_init") }
 		if (conf.get<boolean>('enableCodeActions')) { args_server.push("--enable_code_actions") }
+		if (maxLineLength > 0) { args_server.push(`--max_line_length=${maxLineLength}`) }
+		if (maxCommentLineLength > 0) { args_server.push(`--max_comment_line_length=${maxCommentLineLength}`) }
 
 		// Detect language server version and verify selected options
 		let localLSVersion = getLSVersion(executablePath, args_server);
