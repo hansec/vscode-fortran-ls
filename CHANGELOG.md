@@ -1,3 +1,7 @@
+## 0.5.0
+* Add support for multi-root workspaces (separate LS per root)
+* Add support for language server v1.8 features
+
 ## 0.4.0
 * Add support for language server v1.7 features
 * Verify language server launch arguments before constructing server interface
