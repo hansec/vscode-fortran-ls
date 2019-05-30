@@ -72,6 +72,12 @@
                     "default": false,
                     "description": "Show hover information for variables."
                 },
+                "fortran-ls.hoverSignature": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Show signature information in hover for argument (also enables 'variableHover')."
+                },
                 "fortran-ls.useSignatureHelp": {
                     "scope": "resource",
                     "type": "boolean",
