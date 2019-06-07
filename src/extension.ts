@@ -101,7 +101,7 @@ export async function activate() {
 
 	function didOpenTextDocument(document: TextDocument): void {
 		// We are only interested in Fortran files
-		if (document.languageId !== 'fortran' && document.languageId !== 'fortran_fixed-form' && document.languageId !== 'FortranFreeForm') {
+		if (!document.languageId.toLowerCase().startsWith('fortran')) {
 			return;
 		}
 		let uri = document.uri;
@@ -155,6 +155,7 @@ export async function activate() {
 				// Register the server for Fortran documents
 				documentSelector: [
 					{scheme: 'file', language: 'fortran', pattern: `${folder.uri.fsPath}/**/*`},
+					{scheme: 'file', language: 'fortran-modern', pattern: `${folder.uri.fsPath}/**/*`},
 					{scheme: 'file', language: 'fortran_fixed-form', pattern: `${folder.uri.fsPath}/**/*`},
 					{scheme: 'file', language: 'FortranFreeForm', pattern: `${folder.uri.fsPath}/**/*`}
 				],
