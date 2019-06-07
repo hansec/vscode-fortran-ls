@@ -45,7 +45,7 @@ function getOuterMostWorkspaceFolder(folder: WorkspaceFolder): WorkspaceFolder {
 }
 
 async function checkVersion(ver_str: string) {
-	function checkVersionLocal(rec_ver_str: string = "1.7.2") {
+	function checkVersionLocal(rec_ver_str: string = "1.9.0") {
 		function compareSymantic(ver: string[], rec_ver: string[]) {
 			for (var index = 0; index < rec_ver.length; ++index) {
 			  if (parseInt(ver[index]) < parseInt(rec_ver[index])) {
