@@ -1,3 +1,8 @@
+## 0.6.0
+* Add support for language server v1.9 features
+* Fix support for VSCode "fortran" extension, fixes [#15](https://github.com/hansec/vscode-fortran-ls/issues/15)
+* Bump recommended minimum language server version to 1.9.0
+
 ## 0.5.0
 * Add support for multi-root workspaces (separate LS per root)
 * Add support for language server v1.8 features
