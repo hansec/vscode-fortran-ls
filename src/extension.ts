@@ -6,7 +6,7 @@
 
 import { spawnSync }  from 'child_process';
 const https = require('https');
-import { commands, window, workspace, WorkspaceFolder, Uri, TextDocument } from 'vscode';
+import { commands, extensions, window, workspace, WorkspaceFolder, Uri, TextDocument } from 'vscode';
 import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient';
 
 let clients: Map<string, LanguageClient> = new Map();
@@ -45,7 +45,7 @@ function getOuterMostWorkspaceFolder(folder: WorkspaceFolder): WorkspaceFolder {
 }
 
 async function checkVersion(ver_str: string) {
-	function checkVersionLocal(rec_ver_str: string = "1.9.0") {
+	function checkVersionLocal(rec_ver_str: string = "1.11.0") {
 		function compareSymantic(ver: string[], rec_ver: string[]) {
 			for (var index = 0; index < rec_ver.length; ++index) {
 			  if (parseInt(ver[index]) < parseInt(rec_ver[index])) {
@@ -117,6 +117,13 @@ export async function activate() {
 			return;
 		}
 
+		// Check which base language extension is being used
+		let haveMFortran = false;
+		let modernFortran = extensions.getExtension('krvajalm.linter-gfortran');
+		if (modernFortran) {
+			haveMFortran = modernFortran.isActive;
+		}
+
 		// Get path for the language server
 		const conf = workspace.getConfiguration('fortran-ls', null);
 		const executablePath = conf.get<string>('executablePath') || 'fortls';
@@ -136,6 +143,7 @@ export async function activate() {
 		if (conf.get<boolean>('enableCodeActions')) { args_server.push("--enable_code_actions") }
 		if (maxLineLength > 0) { args_server.push(`--max_line_length=${maxLineLength}`) }
 		if (maxCommentLineLength > 0) { args_server.push(`--max_comment_line_length=${maxCommentLineLength}`) }
+		if (!haveMFortran) { args_server.push(`--hover_language=fortran`) }
 
 		// Detect language server version and verify selected options
 		let localLSVersion = getLSVersion(executablePath, args_server);
