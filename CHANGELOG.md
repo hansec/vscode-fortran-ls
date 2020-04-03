@@ -1,3 +1,6 @@
+## 0.6.1
+* Fix syntax highlighting with "fortran" language package (requires fortls v1.11.0+), fixes [#17](https://github.com/hansec/vscode-fortran-ls/issues/17)
+
 ## 0.6.0
 * Add support for language server v1.9 features
 * Fix support for VSCode "fortran" extension, fixes [#15](https://github.com/hansec/vscode-fortran-ls/issues/15)
