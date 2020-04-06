@@ -119,9 +119,8 @@ export async function activate() {
 
 		// Check which base language extension is being used
 		let haveMFortran = false;
-		let modernFortran = extensions.getExtension('krvajalm.linter-gfortran');
-		if (modernFortran) {
-			haveMFortran = modernFortran.isActive;
+		if (extensions.getExtension('krvajalm.linter-gfortran')) {
+			haveMFortran = true;
 		}
 
 		// Get path for the language server
