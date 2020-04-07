@@ -1,3 +1,6 @@
+## 0.6.2
+* When checking base language extension do not check if active due to lazy loading, fixes [#21](https://github.com/hansec/vscode-fortran-ls/issues/17)
+
 ## 0.6.1
 * Fix syntax highlighting with "fortran" language package (requires fortls v1.11.0+), fixes [#17](https://github.com/hansec/vscode-fortran-ls/issues/17)
 
