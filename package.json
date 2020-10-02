@@ -101,7 +101,7 @@
                     "scope": "resource",
                     "type": "boolean",
                     "default": false,
-                    "description": "Disable diagnostics (requires v1.11.0+)."
+                    "description": "Disable diagnostics (requires v1.12.0+)."
                 },
                 "fortran-ls.maxLineLength": {
                     "scope": "resource",
