@@ -140,6 +140,7 @@ export async function activate() {
 		if (conf.get<boolean>('hoverSignature')) { args_server.push("--hover_signature") }
 		if (conf.get<boolean>('notifyInit')) { args_server.push("--notify_init") }
 		if (conf.get<boolean>('enableCodeActions')) { args_server.push("--enable_code_actions") }
+		if (conf.get<boolean>('disableDiagnostics')) { args_server.push("--disable_diagnostics") }
 		if (maxLineLength > 0) { args_server.push(`--max_line_length=${maxLineLength}`) }
 		if (maxCommentLineLength > 0) { args_server.push(`--max_comment_line_length=${maxCommentLineLength}`) }
 		if (!haveMFortran) { args_server.push(`--hover_language=fortran`) }
