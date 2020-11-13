@@ -139,6 +139,7 @@ export async function activate() {
 		if (conf.get<boolean>('variableHover')) { args_server.push("--variable_hover") }
 		if (conf.get<boolean>('hoverSignature')) { args_server.push("--hover_signature") }
 		if (conf.get<boolean>('notifyInit')) { args_server.push("--notify_init") }
+		if (conf.get<boolean>('preserveKeywordOrder')) { args_server.push("--preserve_keyword_order") }
 		if (conf.get<boolean>('enableCodeActions')) { args_server.push("--enable_code_actions") }
 		if (conf.get<boolean>('disableDiagnostics')) { args_server.push("--disable_diagnostics") }
 		if (maxLineLength > 0) { args_server.push(`--max_line_length=${maxLineLength}`) }
