@@ -91,6 +91,12 @@
                     "default": false,
                     "description": "Notify when workspace initialization is complete (requires v1.7.0+)."
                 },
+                "fortran-ls.preserveKeywordOrder": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Display variable keywords information when hovering in original order (default: sort to consistent ordering)."
+                },
                 "fortran-ls.enableCodeActions": {
                     "scope": "resource",
                     "type": "boolean",
